@@ -76,7 +76,7 @@ gulp.task('clean', (done) => {
 });
 
 gulp.task('copy', [
-  'copy:.htaccess',
+  // 'copy:.htaccess',
   'copy:index.html',
   'copy:jquery',
   'copy:license',
@@ -212,3 +212,19 @@ gulp.task('watch', function () {
 });
 
 gulp.task('live', ['connect', 'watch']);
+
+// run dist for final check
+gulp.task('run', (done) => {
+  runSequence(
+    ['build'],
+    'dist',
+  done)});
+
+
+gulp.task('dist', function() {
+  connect.server({
+  root: 'dist',
+  livereload: true //live reload is not supported from dist
+  })
+
+});
