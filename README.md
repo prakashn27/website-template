@@ -8,3 +8,6 @@
 `gulp live` to live reloading for development
 `gulp run` to run dist index file
 `gulp` -> `gulp build | gulp run`
+
+## TODO checklist
+-[ ] Add message for unsupported browsers

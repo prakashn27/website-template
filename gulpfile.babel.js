@@ -202,13 +202,13 @@ gulp.task('connect', function() {
   });
 });
 
-gulp.task('html', function () {
+gulp.task('src', function () {
   gulp.src('./src/*.html')
   .pipe(connect.reload());
 });
 
 gulp.task('watch', function () {
-  gulp.watch(['./src/*.html','./src/css/*.css'], ['html']);
+  gulp.watch(['./src/*.html','./src/css/*.css','./src/js/*.js'], ['src']);
 });
 
 gulp.task('live', ['connect', 'watch']);

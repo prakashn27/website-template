@@ -1,3 +1,5 @@
+/*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
+
 /*
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
@@ -23,6 +25,11 @@ html {
  *
  * Customize the background color to match your design.
  */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
 
 ::selection {
     background: #b3d4fc;
@@ -97,8 +104,11 @@ html {
 }
 body {
   margin: 0;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-rows: 1fr 3fr 1fr;
   grid-template-rows: 1fr 3fr 1fr;
+  -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   grid-gap: 5px;
 }
@@ -114,6 +124,7 @@ body > main {
 }
 
 body > footer {
+  -ms-grid-row: 3;
   grid-row: 3;
   grid-column: 1 / -1;
 }
@@ -161,6 +172,7 @@ body > footer {
 .visuallyhidden {
     border: 0;
     clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
     clip-path: inset(50%);
     height: 1px;
     margin: -1px;
@@ -180,6 +192,7 @@ body > footer {
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
     clip: auto;
+    -webkit-clip-path: none;
     clip-path: none;
     height: auto;
     margin: 0;
@@ -230,6 +243,7 @@ body > footer {
 }
 
 @media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
        (min-resolution: 1.25dppx),
        (min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
