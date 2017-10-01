@@ -1,6 +1,6 @@
 
-var tabs = document.querySelectorAll('body header nav ul li a');
-var panels = document.querySelectorAll('main article');
+var tabs = document.querySelectorAll('.wrapper nav a');
+var panels = document.querySelectorAll('.wrapper main article');
 
 function setTabHandler(tab, tabPos) {
   tab.onclick = function() {
