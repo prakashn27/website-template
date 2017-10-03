@@ -318,68 +318,101 @@ body {
   grid-auto-flow: row;
 }
  */
-  .content {
-    grid-area: content;
-  }
+ body {
+  transition: all 0.7s ease;
+ }
+.content {
+  grid-area: content;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 22px;
+}
 
-  .header {
-    grid-area: header;
-  }
-  .nav {
-    grid-area: nav;
-  }
-  .footer {
-    grid-area: footer;
-  }
+.header {
+  grid-area: header;
+  justify-self: center;
+  text-align: center;
+  font-family: 'Merriweather', serif;
+  text-transform: uppercase;
+}
+.nav {
+  grid-area: nav;
+  justify-self: center;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+.nav a {
+  display: block;
+}
+.footer {
+  grid-area: footer;
+}
 
-  .wrapper {
-    background-color: #fff;
-    color: #444;
-  }
+/* .wrapper {
+  background-color: #fff;
+  color: #444;
+} */
 
-  .wrapper {
-    display: grid;
-    grid-gap: 1em;
-    grid-template-areas:
-     "header"
-     "nav"
-     "content"
-     "content"
-     "footer"
-  }
+.wrapper {
+  display: grid;
+  grid-gap: 1em;
+  grid-template-areas:
+   "header"
+   "nav"
+   "content"
+   "content"
+   "footer";
 
+}
+  /* tablet setting */
   @media only screen and (min-width: 500px)  {
-  .wrapper {
-
-    grid-template-columns: 20% auto;
-    grid-template-areas:
-    "header   nav"
-    "content  content"
-    "content content"
-    "footer   footer";
+    .wrapper {
+      grid-template-columns: 20% auto;
+      grid-template-areas:
+      "header   nav"
+      "content  content"
+      "content content"
+      "footer   footer";
+    }
+    .nav {
+      justify-self:  end;
+      align-self: center;
+    }
+    .header {
+      justify-self:  start;
+    }
+    .nav a {
+      display: inline;
+    }
   }
-  }
 
+  /* large screen setting */
   @media only screen and (min-width: 600px)   {
     .wrapper {
-      grid-gap: 20px;
-      grid-template-columns: 1fr auto 300px;
+      /* grid-gap: 20px; */
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
       grid-template-areas:
-      "header  header  nav"
-      "content content content"
-      "footer  footer  footer";
+      ". header  nav  nav ."
+      ". content content content ."
+      ". footer  footer  footer .";
+    }
+    .nav {
+      justify-self:  end;
+      align-self: center;
+    }
+    .header {
+      justify-self:  start;
+    }
+    .nav a {
+      display: inline;
     }
   }
 
 .box {
-  background-color: #444;
-  color: #fff;
   border-radius: 5px;
-  padding: 10px;
-  font-size: 150%;
 }
 
-.header,
 .footer {
-  background-color: #999;
+  /* background-color: #999; */
+  text-align: center;
+  font-size: 14px;
 }
