@@ -1,9 +1,8 @@
 
 var tabs = document.querySelectorAll('.wrapper nav a');
 var panels = document.querySelectorAll('.wrapper main article');
-var body = document.getElementsByName('body');
 var body_color = ['#181818', '#560027', '#DDAA54'];
-var font_color = ['#FFFFFF', '#FFFFFF', '#473418']
+var font_color = ['#FFFFFF', '#FFFFFF', '#473418'];
 function setTabHandler(tab, tabPos) {
   tab.onclick = function() {
     for(let i = 0; i < tabs.length; i++) {
