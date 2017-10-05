@@ -1,8 +1,10 @@
 
 var tabs = document.querySelectorAll('.wrapper nav a');
 var panels = document.querySelectorAll('.wrapper main article');
-var body_color = ['#181818', '#560027', '#DDAA54'];
-var font_color = ['#FFFFFF', '#FFFFFF', '#473418'];
+// var body_color = ['#181818', '#560027', '#DDAA54'];
+// var font_color = ['#FFFFFF', '#FFFFFF', '#473418'];
+var body_color = ['#222', '#12005E', '#870000'];
+var font_color = ['#E5E5E5', '#FFFFFF', '#FFFFFF'];
 function setTabHandler(tab, tabPos) {
   tab.onclick = function() {
     for(let i = 0; i < tabs.length; i++) {
