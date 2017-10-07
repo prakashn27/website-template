@@ -326,6 +326,7 @@ body {
   grid-area: content;
   font-family: 'Quicksand', sans-serif;
   font-size: 22px;
+  padding: 0px 10px;
 }
 
 .header {
@@ -334,6 +335,7 @@ body {
   text-align: center;
   font-family: 'Merriweather', serif;
   text-transform: uppercase;
+  color: #FFFFFF;
 }
 .nav {
   grid-area: nav;
@@ -341,8 +343,12 @@ body {
   font-size: 20px;
   letter-spacing: 2px;
 }
+a {
+  color: #FF5252;
+}
 .nav a {
   display: block;
+  font-family: monospace;
 }
 .footer {
   grid-area: footer;
@@ -352,6 +358,8 @@ h2 {
 }
 .wrapper {
   display: grid;
+  margin: 0 auto;
+  max-width: 1260px;
   grid-gap: 1em;
   grid-template-rows: auto auto minmax(200px, auto) 1fr;
   grid-template-areas:
@@ -378,19 +386,28 @@ h2 {
     }
     .nav a {
       display: inline;
+      padding-bottom: 5px;
+    }
+    .nav a::after {
+      content: " |";
+    }
+    .nav a:last-child::after {
+      content: "";
+    }
+    .nav a:hover {
+      border-bottom: 3px solid;
     }
   }
 
   /* large screen setting */
   @media only screen and (min-width: 600px)   {
     .wrapper {
-      /* grid-gap: 20px; */
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr minmax(600px, 3fr) 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr minmax(600px, 5fr) 1fr;
       grid-template-areas:
-      ". header  nav  nav ."
-      ". content content content ."
-      ". footer  footer  footer .";
+      "header  nav  nav"
+      "content content content"
+      "footer  footer  footer";
     }
     .nav {
       justify-self:  end;

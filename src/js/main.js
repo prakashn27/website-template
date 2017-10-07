@@ -3,8 +3,8 @@ var tabs = document.querySelectorAll('.wrapper nav a');
 var panels = document.querySelectorAll('.wrapper main article');
 // var body_color = ['#181818', '#560027', '#DDAA54'];
 // var font_color = ['#FFFFFF', '#FFFFFF', '#473418'];
-var body_color = ['#222', '#12005E', '#870000'];
-var font_color = ['#E5E5E5', '#FFFFFF', '#FFFFFF'];
+var body_color = ['#222'];
+var font_color = ['#E5E5E5'];
 function setTabHandler(tab, tabPos) {
   tab.onclick = function() {
     for(let i = 0; i < tabs.length; i++) {
@@ -15,8 +15,8 @@ function setTabHandler(tab, tabPos) {
       panels[i].className = '';
     }
     panels[tabPos].className = 'active-panel';
-    document.body.style.background = body_color[tabPos];
-    document.body.style.color = font_color[tabPos];
+    // document.body.style.background = body_color[tabPos];
+    // document.body.style.color = font_color[tabPos];
   };
 }
 
